@@ -1,0 +1,6 @@
+version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
+options: "2810b26ba932a4753d96fb03a145f5a5"
+build_time: [555580077, 376756000]
+inputs:
+  "/Users/leo/Desktop/Practice_iOS/StackViewDemo/StackViewDemo/ViewController.swift": [555580045, 0]
+  "/Users/leo/Desktop/Practice_iOS/StackViewDemo/StackViewDemo/AppDelegate.swift": [555580045, 0]

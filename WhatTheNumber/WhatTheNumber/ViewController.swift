@@ -23,6 +23,7 @@ class ViewController: UIViewController {
         inputTextField.becomeFirstResponder()
     }
     
+    
     //MARK: Action Button
     
     @IBAction func btnGuess(_ sender: UIButton)
@@ -37,15 +38,14 @@ class ViewController: UIViewController {
             //輸入完文字框後，自動清空文字框
 //            inputTextField.text = ""
             
-            //take input text out
-            //print("inputText = \(inputText)")
+            //取出input text的字串，並轉為實數
             let inputNumber = Int(inputText)
             print("inputNumber = \(String(describing: inputNumber))")
             
             if inputNumber == nil
             {
-                //no input
-                print("no input")
+                //沒有輸入內容
+                print("沒有輸入內容")
                 lblMessage.text = "尚未輸入！ 正確的數字介於 \(minNumber) ~ \(maxNumber)"
             } else {
                 if inputNumber! > maxNumber {
@@ -77,9 +77,6 @@ class ViewController: UIViewController {
                         lblMessage.text = "正確的數字介於 \(minNumber) ~ \(maxNumber)"
                         inputTextField.text = "X"
                         btnText.setTitle("再試一次", for: .normal)
-                        
-                        //輸入文字後，取代原輸入文字（第一次有效）
-                        inputTextField.clearsOnInsertion = true
                     }
                 }
             }
@@ -92,6 +89,10 @@ class ViewController: UIViewController {
             answer = Int(arc4random_uniform(100) + 1)
             isOver = false
         }
+        
+        //設定文字輸入框回到初始狀態，重新輸入數字後再清除原內容
+        inputTextField.becomeFirstResponder()
+        inputTextField.clearsOnInsertion = true
     }
 }
 

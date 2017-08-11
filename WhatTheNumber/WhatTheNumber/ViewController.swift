@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             let inputText = inputTextField.text!
             
             //輸入完文字框後，自動清空文字框
-//            inputTextField.text = ""
+            //inputTextField.text = ""
             
             //取出input text的字串，並轉為實數
             let inputNumber = Int(inputText)
@@ -46,23 +46,23 @@ class ViewController: UIViewController {
             {
                 //沒有輸入內容
                 print("沒有輸入內容")
-                lblMessage.text = "尚未輸入！ 正確的數字介於 \(minNumber) ~ \(maxNumber)"
+                lblMessage.text = "尚未輸入！ 請輸入 \(minNumber) ~ \(maxNumber) 的數字"
             } else {
                 if inputNumber! > maxNumber {
                     //user input too large
                     print("too large")
-                    lblMessage.text = "太大了！正確的數字介於 \(minNumber) ~ \(maxNumber)"
+                    lblMessage.text = "太大了！請輸入 \(minNumber) ~ \(maxNumber) 的數字"
                 } else if inputNumber! < minNumber {
                     //user input too small
                     print("too small")
-                    lblMessage.text = "太小了！正確的數字介於 \(minNumber) ~ \(maxNumber)"
+                    lblMessage.text = "太小了！請輸入 \(minNumber) ~ \(maxNumber) 的數字"
                 } else {
                     //check answer
                     print("check answer")
                     if inputNumber == answer {
                         //Bingo! right anwer
-                        lblMessage.text = "好棒棒！！"
-                        inputTextField.text = "O"
+                        lblMessage.text = "好棒棒！"
+                        inputTextField.text = "Bingo!"
                         btnText.setTitle("再玩一次", for: .normal)
                         isOver = true
                     } else {
@@ -74,7 +74,7 @@ class ViewController: UIViewController {
                             //small than answer
                             minNumber = inputNumber!
                         }
-                        lblMessage.text = "正確的數字介於 \(minNumber) ~ \(maxNumber)"
+                        lblMessage.text = "請輸入 \(minNumber) ~ \(maxNumber) 的數字"
                         inputTextField.text = "X"
                         btnText.setTitle("再試一次", for: .normal)
                     }
@@ -85,8 +85,9 @@ class ViewController: UIViewController {
             //Game is Over
             maxNumber = 100
             minNumber = 1
-            lblMessage.text = "正確的數字介於 \(minNumber) ~ \(maxNumber)"
+            lblMessage.text = "請輸入 \(minNumber) ~ \(maxNumber) 的數字"
             answer = Int(arc4random_uniform(100) + 1)
+            inputTextField.text = ""
             isOver = false
         }
         

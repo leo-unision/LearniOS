@@ -1,16 +1,32 @@
-var x = 2
-x + 3
+var firstNumber:Int = 18
+let secondNumber:Double = 12.34
 
-x = 8
-x = 5
-x + 8
+var isTheLightsOn:Bool = true
+isTheLightsOn = false
 
-let age = 18
-age + 2
+var threeImportantWord:String = "I love you"
+let name = "wei wei"
+threeImportantWord += name
 
-var theAgeOfMyCat = 10
+var theFact = "I'm \(firstNumber) yearss old."
 
-var theageofmycat = 30
+let number:String = "40"
 
-let myLuckyNumber = 7
+var dialog = "My mom said, \"life was like a box of chocolate.\""
+
+dialog.lowercased()
+dialog = dialog.uppercased()
+dialog
+
+
+
+let language:String = "Swift"
+
+let isCool:Bool = true
+
+var version:Double = 3.0
+
+print("My favorite programming language is \(language)")
+
+
 

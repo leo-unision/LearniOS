@@ -1,6 +1,0 @@
-version: "Apple Swift version 3.1 (swiftlang-802.0.53 clang-802.0.42)"
-options: "606e3c62faad0ddb83675139e5a5da39"
-build_time: [555727355, 695149000]
-inputs:
-  "/Users/leo/Desktop/practice_iOS/WhatTheNumber/WhatTheNumber/ViewController.swift": [555727355, 0]
-  "/Users/leo/Desktop/practice_iOS/WhatTheNumber/WhatTheNumber/AppDelegate.swift": [555656413, 0]
